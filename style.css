@@ -265,7 +265,7 @@ html {
 }
 
 .contact-link {
-  transition: background-color 0.8s ease-in-out;
+  transition: background-color 0.8s ease-in;
 }
 
 .footer-link {
