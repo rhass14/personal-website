@@ -9,8 +9,8 @@
 :root {
   --clr-background: #ffffff;
   --clr-font: #000000;
-  --clr-accent: #81b622;
-  --clr-l-active: #ecb1a9;
+  --clr-accent: #80ed99;
+  --clr-l-active: #38a3a5;
 }
 
 html {
@@ -274,5 +274,4 @@ html {
 
 .experience-link {
   color: var(--clr-font);
-  padding: 0.25rem;
 }
