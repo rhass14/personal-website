@@ -1,0 +1,273 @@
+/*General Stylings */
+*,
+*:before *:after {
+  box-sizing: border-box;
+}
+
+/* Font, Color, Layout */
+
+:root {
+  --clr-background: #ffffff;
+  --clr-font: #000000;
+  --clr-accent: #81b622;
+  --clr-l-active: #ecb1a9;
+}
+
+html {
+  font-family: monospace;
+  font-size: 16px;
+}
+
+/* Notiz: Schriftgröße proportional vergrößern (breakpoints) */
+@media screen and (min-width: 768px) {
+  html {
+    font-size: 18px;
+  }
+}
+
+@media screen and (min-width: 786px) {
+  html {
+    font-size: 18px;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  html {
+    font-size: 20px;
+  }
+}
+
+/* Notiz: Eigene Schrift für Headings */
+*/ h* {
+  font-family: "Work Sans", sans-serif;
+}
+
+/* Notiz: Hintergrund Farbe, wenn Bereiche ausgewählt werden */
+*::selection {
+  background-color: black;
+  color: #ffffff;
+}
+
+/*header styling */
+
+.header-styling {
+  background-image: linear-gradient(
+    0deg,
+    var(--clr-accent),
+    var(--clr-background)
+  );
+  padding: 3rem 1rem;
+  padding-top: 4.5rem;
+  text-align: center;
+  position: relative;
+}
+
+.heading-group {
+  font-size: 4rem;
+}
+
+.h1-styling {
+  font-size: 1em;
+}
+
+.profession {
+  font-size: 0.25em;
+}
+
+.profession::after {
+  content: "👩‍🌾";
+}
+
+/*header styling -.hire-me*/
+
+.hire-me {
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+  padding: 0.5rem;
+  border-radius: 0.25rem;
+  opacity: 0.5;
+  background: var(--clr-accent);
+  color: var(--clr-font);
+  transform-origin: top right;
+  transition: transform 0.3s, opacity 0.25s ease-in;
+}
+
+.header-styling:hover .hire-me,
+.header-styling:focus-within .hire-me {
+  opacity: 1;
+  transform: scale(1.3);
+}
+
+@media screen and (min-width: 992px) {
+  .hire-me {
+    position: fixed;
+  }
+}
+
+@media print {
+  .hire-me {
+    display: none;
+  }
+}
+
+/*header styling -.navigation*/
+
+.navigation {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@media screen and (min-width: 768px) {
+  .navigation {
+    flex-direction: row;
+    justify-content: center;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .nav-link + .nav-link {
+    margin-left: 1rem;
+  }
+}
+
+@media print {
+  .navigation {
+    display: none;
+  }
+}
+
+/*main styling*/
+
+.main-styling {
+  max-width: 60ch;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+@media screen and (min-width: 768px) {
+  .main-styling {
+    max-width: 80ch;
+  }
+}
+
+.main-styling > * + * {
+  margin-top: 3rem;
+}
+
+@media screen and (min-width: 768px) {
+  .main-styling > * + * {
+    margin-top: 8rem;
+  }
+}
+
+.main-styling > *:first-child {
+  margin-top: 4rem;
+}
+
+.main-styling > *:first-child {
+  border-top: none;
+}
+
+.main-article {
+  border-top: 0.125rem solid var(--clr-accent);
+  padding: 0 1rem;
+}
+
+.welcome-styling {
+  font-style: italic;
+}
+
+@media screen and (min-width: 768px) {
+  .main-article {
+    display: grid;
+    grid-template-columns: 1fr 2.5fr;
+  }
+}
+
+.main-article-content {
+  margin-top: 4rem;
+}
+
+.main-article-heading {
+  position: relative;
+  left: -1rem;
+}
+
+.experiences-header {
+  display: flex;
+  flex-direction: column;
+}
+
+@media screen and (min-width: 768px) {
+  .experiences-header {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    justify-content: space-between;
+  }
+}
+
+/*footer */
+
+.footer-styling {
+  margin-top: 3rem;
+  background-color: var(--clr-accent);
+  color: var(--clr-font);
+  padding: 2rem;
+}
+
+.footer-text {
+  text-align: center;
+  margin: 0;
+}
+
+/*Link Styling */
+
+.nav-link {
+  padding: 0.25rem 0.5rem;
+  color: var(--clr-font);
+  transition: background-color 0.5s ease-in-out;
+}
+
+.nav-link:hover {
+  background-color: var(--clr-accent);
+  color: var(--clr-font);
+}
+
+.nav-link:active {
+  background-color: var(--clr-l-active);
+  color: var(--clr-font);
+}
+
+.nav-link:visited {
+  color: var(--clr-font);
+}
+
+.nav-link:focus {
+  background-color: var(--clr-accent);
+  outline-color: var(--clr-font);
+  outline-style: dotted;
+}
+
+.contact-link {
+  color: var(--clr-font);
+  padding: 0.25rem;
+}
+
+.contact-link:hover {
+  background-color: var(--clr-l-active);
+}
+
+.contact-link:active {
+  background-color: var(--clr-accent);
+}
+
+.contact-link {
+  transition: background-color 0.8s ease-in-out;
+}
+
+.footer-link {
+  color: var(--clr-font);
+}
